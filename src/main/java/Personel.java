@@ -44,11 +44,18 @@ public class Personel {
         else return true;
     }
 
+
+    public boolean compareTo(int personelId) {
+
+        int varolanId = this.getPersonelId();
+        if (personelId < varolanId) return false;
+        else if (personelId > varolanId) return false;
+        else return true;
+    }
+
     public int getPersonelId() {
         return personelId;
     }
-
-
 
     public String getPersonelAdi() {
         return personelAdi;

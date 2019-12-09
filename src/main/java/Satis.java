@@ -41,7 +41,8 @@ public class Satis {
 
     public void musteriSatis(Urun urun,Musteri musteri,int satis){
             if (urun.compareTo(urun)){
-                boolean kontrol=urun.setSatisSayisi(satis,"-");
+
+                boolean kontrol=urun.satisSayisiGuncelle(satis,"-");
 
                 if (kontrol) {
                     System.out.println(urun.toString() + " ürününden " + satis + " kadar satıldı.");
