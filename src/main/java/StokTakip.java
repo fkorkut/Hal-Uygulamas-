@@ -3,9 +3,12 @@ import java.util.Scanner;
 
 public class StokTakip {
 
-   static ListelemeIslemleri listelemeIslemleri=new ListelemeIslemleri();
-   static SecimIslemleri secimIslemleri=new SecimIslemleri();
-   static Scanner  scanner=new Scanner(System.in);
+    static Scanner  scanner=new Scanner(System.in);
+
+    static ListelemeIslemleri listelemeIslemleri=new ListelemeIslemleri();
+    static SecimIslemleri secimIslemleri=new SecimIslemleri();
+
+
 
     public static Boolean satisSayisiGuncelle(Urun urun,int satisSayisi,String islem) {
         boolean result=true;
@@ -26,7 +29,6 @@ public class StokTakip {
             }
         }
         return  result;
-
     }
 
     public static void urunStokGuncelle(List<Urun> listUrun,Urun guncelenecekUrun,int miktar){
@@ -40,6 +42,7 @@ public class StokTakip {
         }
     }
 
+
     public static void personelStokGuncelle(List<Personel> listpersonel,Personel guncelenecekPersonel,int miktar){
         for (Personel personel:listpersonel) {
             if (personel.compareTo(guncelenecekPersonel)){
@@ -50,6 +53,7 @@ public class StokTakip {
 
         }
     }
+
 
     public static void stokUret(List<Urun> listUrun, List<Personel> listPersonel,List<Stok> listStok, Urun urun, Personel personel) {
 

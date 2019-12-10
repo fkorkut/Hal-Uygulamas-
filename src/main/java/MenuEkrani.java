@@ -11,8 +11,8 @@ public class MenuEkrani {
         System.out.println("3.Ürün stokları");
         System.out.println("4.Müsteri bazlı stok güncelleme");
         System.out.println("5.Satışları görüntüle");
-        System.out.println("6.Stokları dosyaya yazdır.");
-        System.out.println("7.Stokları dosyadan oku.");
+        System.out.println("6.Stokların güncel halini kaydet.");
+        System.out.println("7.Stokları güncel halini kaydet.");
         System.out.println("8.Çıkış");
 
         int secim = scanner.nextInt();

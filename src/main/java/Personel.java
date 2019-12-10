@@ -1,8 +1,6 @@
 import java.io.Serializable;
 
 public class Personel implements Serializable {
-
-
     private int personelId;
     private String personelAdi;
     private  int alisSayisi;
@@ -64,7 +62,6 @@ public class Personel implements Serializable {
 
 
     public boolean compareTo(int personelId) {
-
         int varolanId = this.getPersonelId();
         if (personelId < varolanId) return false;
         else if (personelId > varolanId) return false;

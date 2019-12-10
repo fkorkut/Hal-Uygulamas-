@@ -7,7 +7,6 @@ import java.util.List;
 public  class DosyaIslemleri {
 
     public void stoklariDosyayaObjeOlarakYaz(List<Stok> stokList) {
-
         try (FileOutputStream fileOut = new FileOutputStream(".\\stokObje.txt",false);
              ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);) {
             objectOut.writeObject(stokList);
