@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.Random;
 
-public abstract class Urun {
+public abstract class Urun implements Serializable {
     private int urunId;
     private int urunFiyat;
     private EnumMiktarTuru miktar;
@@ -65,25 +66,7 @@ public abstract class Urun {
     }
 
 
-    public Boolean satisSayisiGuncelle(int satisSayisi,String islem) {
-        boolean result=true;
-        if (islem=="+"){
-            this.satisSayisi =getSatisSayisi()+ satisSayisi;
-        }
-        else if (islem=="-")
-        {
-            int satis=getSatisSayisi()-satisSayisi;
-            if (satis>0){
-                this.satisSayisi=satis;
 
-            }
-            else {
-                result=false;
-            }
-        }
-        return  result;
-
-    }
 
 
 }

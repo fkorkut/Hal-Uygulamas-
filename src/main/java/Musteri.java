@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.List;
 
-public class Musteri {
+public class Musteri implements Serializable {
     private int personelId;
     private String personelAdi;
     private  int alisSayisi;

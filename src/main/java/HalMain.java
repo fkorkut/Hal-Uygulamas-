@@ -1,3 +1,4 @@
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -11,11 +12,13 @@ public class HalMain {
          List<Satis> listSatis = new ArrayList<>();
          ListelemeIslemleri listelemeIslemleri = new ListelemeIslemleri();
          SecimIslemleri secimIslemleri = new SecimIslemleri();
+         DosyaIslemleri dosyaIslemleri=new DosyaIslemleri();
 
         MenuEkrani menuEkrani = new MenuEkrani();
         List<Personel> listPersonel = new ArrayList<>();
         List<Urun> listUrun = new ArrayList<>();
         List<Musteri> listMusteri = new ArrayList<>();
+
 
 
         Personel personel1 = new Personel(1, "Ali", 0);
@@ -70,16 +73,19 @@ public class HalMain {
                     listelemeIslemleri.satisListe(listSatis);
                     break;
                 case 6:
+                    dosyaIslemleri.stoklariDosyayaObjeOlarakYaz(listStok);
                     break;
-
+                case 7:
+                    List<Stok> dosyaListStok=dosyaIslemleri.stoklariDosyadanOku();
+                    for (Stok stok : dosyaListStok) {
+                        System.out.println(stok.toString());
+                    }
+                    break;
+                case 8:
+                    System.exit(0);
+                    break;
             }
         }
     }
-
-
-
-
-
-
 }
 

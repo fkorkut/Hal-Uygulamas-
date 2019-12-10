@@ -1,4 +1,5 @@
 public class Satis {
+
  private Urun urun;
  private  Musteri musteri;
  private int satisAdeti;
@@ -39,18 +40,6 @@ public class Satis {
         this.satisAdeti = satisAdeti;
     }
 
-    public void musteriSatis(Urun urun,Musteri musteri,int satis){
-            if (urun.compareTo(urun)){
 
-                boolean kontrol=urun.satisSayisiGuncelle(satis,"-");
-
-                if (kontrol) {
-                    System.out.println(urun.toString() + " ürününden " + satis + " kadar satıldı.");
-                } else {
-                    System.out.println("Stokta yeterli ürün yok...İşlem geçersiz");
-                }
-            }
-
-    }
 
 }

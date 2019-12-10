@@ -1,7 +1,17 @@
-public class Stok {
+import java.io.Serializable;
+
+public class Stok implements Serializable {
     Urun urun;
     Personel personel;
     int stokSayisi;
+
+    public Stok() { }
+
+    public Stok(Urun urun, Personel personel, int stokSayisi) {
+        this.urun = urun;
+        this.personel = personel;
+        this.stokSayisi = stokSayisi;
+    }
 
     public Urun getUrun() {
         return urun;
@@ -27,11 +37,8 @@ public class Stok {
         this.stokSayisi = stokSayisi;
     }
 
-    public Stok(Urun urun, Personel personel, int stokSayisi) {
-        this.urun = urun;
-        this.personel = personel;
-        this.stokSayisi = stokSayisi;
+    @Override
+    public String toString() {
+        return "Stok : " +  "  urun=" + urun.toString() + ", personel=" + personel.toString() + ", stokSayisi=" + stokSayisi ;
     }
-
-
 }

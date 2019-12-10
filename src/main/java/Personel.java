@@ -1,4 +1,6 @@
-public class Personel {
+import java.io.Serializable;
+
+public class Personel implements Serializable {
 
 
     private int personelId;
@@ -13,13 +15,29 @@ public class Personel {
         this.alisSayisi =getAlisSayisi()+alisSayisi;
     }
 
-    public Personel(int personelId, String personelAdi,int alisSayisi) {
+    public Personel() {
+
+    }
+
+    public Personel(int personelId, String personelAdi, int alisSayisi) {
         this.personelAdi = personelAdi;
         this.personelId=personelId;
         this.alisSayisi=alisSayisi;
     }
     public void setPersonelId(int personelId) {
         this.personelId = personelId;
+    }
+
+    public int getPersonelId() {
+        return personelId;
+    }
+
+    public String getPersonelAdi() {
+        return personelAdi;
+    }
+
+    public void setPersonelAdi(String personelAdi) {
+        this.personelAdi = personelAdi;
     }
 
     @Override
@@ -51,17 +69,5 @@ public class Personel {
         if (personelId < varolanId) return false;
         else if (personelId > varolanId) return false;
         else return true;
-    }
-
-    public int getPersonelId() {
-        return personelId;
-    }
-
-    public String getPersonelAdi() {
-        return personelAdi;
-    }
-
-    public void setPersonelAdi(String personelAdi) {
-        this.personelAdi = personelAdi;
     }
 }
